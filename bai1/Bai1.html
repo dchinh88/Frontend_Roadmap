@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sach sinh vien</title>
+    <link rel="stylesheet" href="style-bai1.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="area-search"></div>
+            <label for="">Tu khoa:</label>
+            <input type="text" name="txtTukhoa" placeholder="Tu khoa can tim">
+            <button>Tim kiem</button>
+        </div>
+
+        <div class="area-result">
+            <table>
+                <tr style="background-color: red; color: white;">
+                    <th>Ma SV</th>
+                    <th>Ten SV</th>
+                    <th>Ngay sinh</th>
+                    <th>Gioi tinh</th>
+                    <th>Khoa</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>123456</td>
+                    <td>Nguyen Duc Chinh</td>
+                    <td>8/8/2002</td>
+                    <td>Nam</td>
+                    <td>CNTT</td>
+                    <td>
+                        <a href="">Sua</a>
+                        <a href="">Xoa</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>987654</td>
+                    <td>Chinh Dep Trai</td>
+                    <td>6/6/2002</td>
+                    <td>Nam</td>
+                    <td>CNTT</td>
+                    <td>
+                        <a href="">Sua</a>
+                        <a href="">Xoa</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>123456</td>
+                    <td>Nguyen Duc Chinh</td>
+                    <td>8/8/2002</td>
+                    <td>Nam</td>
+                    <td>CNTT</td>
+                    <td>
+                        <a href="">Sua</a>
+                        <a href="">Xoa</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>987654</td>
+                    <td>Chinh Dep Trai</td>
+                    <td>6/6/2002</td>
+                    <td>Nam</td>
+                    <td>CNTT</td>
+                    <td>
+                        <a href="">Sua</a>
+                        <a href="">Xoa</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>123456</td>
+                    <td>Nguyen Duc Chinh</td>
+                    <td>8/8/2002</td>
+                    <td>Nam</td>
+                    <td>CNTT</td>
+                    <td>
+                        <a href="">Sua</a>
+                        <a href="">Xoa</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>987654</td>
+                    <td>Chinh Dep Trai</td>
+                    <td>6/6/2002</td>
+                    <td>Nam</td>
+                    <td>CNTT</td>
+                    <td>
+                        <a href="">Sua</a>
+                        <a href="">Xoa</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>123456</td>
+                    <td>Nguyen Duc Chinh</td>
+                    <td>8/8/2002</td>
+                    <td>Nam</td>
+                    <td>CNTT</td>
+                    <td>
+                        <a href="">Sua</a>
+                        <a href="">Xoa</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>987654</td>
+                    <td>Chinh Dep Trai</td>
+                    <td>6/6/2002</td>
+                    <td>Nam</td>
+                    <td>CNTT</td>
+                    <td>
+                        <a href="">Sua</a>
+                        <a href="">Xoa</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>123456</td>
+                    <td>Nguyen Duc Chinh</td>
+                    <td>8/8/2002</td>
+                    <td>Nam</td>
+                    <td>CNTT</td>
+                    <td>
+                        <a href="">Sua</a>
+                        <a href="">Xoa</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>987654</td>
+                    <td>Chinh Dep Trai</td>
+                    <td>6/6/2002</td>
+                    <td>Nam</td>
+                    <td>CNTT</td>
+                    <td>
+                        <a href="">Sua</a>
+                        <a href="">Xoa</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="area-addstudent">
+            <form action="" method="post">
+                <button class="ADD" onclick="addStudent()">Them</button>
+                <button class="UPDATE" onclick="updateStudent()">Cap nhat</button>
+                <button class="DELETE" onclick="deleteStudent()">Xoa</button> <br>
+                <label for="">Ma Sv <span style="color: red;">(*)</span></label>
+                <input type="text" id="masv" name="txtMaSV" placeholder="Nhap ma sv" required> <br>
+                <label for="">Ten SV</label>
+                <input type="text" id="hoten" name="txtTenSV" placeholder="Nhap ten sv"> <br>
+                <label for="">Ngay sinh</label>
+                <input type="text" id="ngaysinh" name="txtNgaySinh" placeholder="Nhap ngay sinh"> <br>
+                <label for="">Gioi tinh</label>
+                <input type="radio" id="male" name="gender" value="Nam">
+                <label for="gender">Nam</label>
+                <input type="radio" id="famale" name="gender" value="Nu">
+                <label for="gender">Nu</label> <br>
+                <label for="">Khoa</label>
+                <select name="khoa" id="khoa">
+                    <option value="CNTT">CNTT</option>
+                    <option value="QTKD">QTKD</option>
+                    <option value="NNVHTQ">NNVHTQ</option>
+                    <option value="LTK">LTK</option>
+                </select>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="bai1.js"></script>
+</body>
+
+</html>
