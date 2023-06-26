@@ -3,20 +3,97 @@
 }
 
 body {
-    
+
     font-family: Arial, Helvetica, sans-serif;
 }
-.luotchoi{
+
+h1{
+    text-align: center;
+}
+
+.luotchoi {
     font-family: sans-serif;
     font-size: 14px;
+    text-align: center;
 }
-.gamettt{
+
+.gamettt {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 0px;
+    row-gap: 2px;
     border: 1px solid black;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 24px;
     font-weight: bold;
+    width: 300px;
+    height: 300px;
+}
+.board {
+    display: grid;
+    grid-template-columns: auto auto auto;
+
 }
 
-.gamettt tr td {
-    background-color: #EEEEEE;
+button {
+    width: 100px;
+    height: 100px;
+    color: red;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: rgb(187, 187, 187);
+}
+
+.content {
+    position: absolute;
+    border: 1px solid black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    /* 15% from the top and centered */
+    padding: 0px;
+    border-radius: 10px;
+    width: 300px;
+    height: 200px;
+    font-size: 17px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.modal-header {
+    padding: 2px;
+    border-radius: 10px 10px 0 0;
+}
+
+.modal-body {
+    top: -10px;
+    position: relative;
+}
+#restartBtn {
+    width: 150px;
+    height: 50px;
+    color: white;
+    font-size: 15px;
+    background-color: darkgrey;
 }

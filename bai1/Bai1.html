@@ -7,167 +7,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Danh sach sinh vien</title>
     <link rel="stylesheet" href="style-bai1.css">
+    <!-- <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 </head>
 
 <body>
-    <div class="container">
-        <div class="area-search"></div>
-            <label for="">Tu khoa:</label>
-            <input type="text" name="txtTukhoa" placeholder="Tu khoa can tim">
-            <button>Tim kiem</button>
-        </div>
+    <div style="margin-top: 50px;" class="container">
+        <div class="row">
+            <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css"
+                rel="stylesheet">
+            <!-- SEARCH -->
+            <div style="padding: 10px;" class="search col-md-12">
+                <div class="area-search"></div>
+                <label for="">Từ khóa:</label>
+                <input type="text" name="txtTukhoa" placeholder="Từ khóa cần tìm">
+                <button>Tìm kiếm</button>
+            </div>
 
-        <div class="area-result">
-            <table>
-                <tr style="background-color: red; color: white;">
-                    <th>Ma SV</th>
-                    <th>Ten SV</th>
-                    <th>Ngay sinh</th>
-                    <th>Gioi tinh</th>
-                    <th>Khoa</th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <td>123456</td>
-                    <td>Nguyen Duc Chinh</td>
-                    <td>8/8/2002</td>
-                    <td>Nam</td>
-                    <td>CNTT</td>
-                    <td>
-                        <a href="">Sua</a>
-                        <a href="">Xoa</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>987654</td>
-                    <td>Chinh Dep Trai</td>
-                    <td>6/6/2002</td>
-                    <td>Nam</td>
-                    <td>CNTT</td>
-                    <td>
-                        <a href="">Sua</a>
-                        <a href="">Xoa</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>123456</td>
-                    <td>Nguyen Duc Chinh</td>
-                    <td>8/8/2002</td>
-                    <td>Nam</td>
-                    <td>CNTT</td>
-                    <td>
-                        <a href="">Sua</a>
-                        <a href="">Xoa</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>987654</td>
-                    <td>Chinh Dep Trai</td>
-                    <td>6/6/2002</td>
-                    <td>Nam</td>
-                    <td>CNTT</td>
-                    <td>
-                        <a href="">Sua</a>
-                        <a href="">Xoa</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>123456</td>
-                    <td>Nguyen Duc Chinh</td>
-                    <td>8/8/2002</td>
-                    <td>Nam</td>
-                    <td>CNTT</td>
-                    <td>
-                        <a href="">Sua</a>
-                        <a href="">Xoa</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>987654</td>
-                    <td>Chinh Dep Trai</td>
-                    <td>6/6/2002</td>
-                    <td>Nam</td>
-                    <td>CNTT</td>
-                    <td>
-                        <a href="">Sua</a>
-                        <a href="">Xoa</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>123456</td>
-                    <td>Nguyen Duc Chinh</td>
-                    <td>8/8/2002</td>
-                    <td>Nam</td>
-                    <td>CNTT</td>
-                    <td>
-                        <a href="">Sua</a>
-                        <a href="">Xoa</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>987654</td>
-                    <td>Chinh Dep Trai</td>
-                    <td>6/6/2002</td>
-                    <td>Nam</td>
-                    <td>CNTT</td>
-                    <td>
-                        <a href="">Sua</a>
-                        <a href="">Xoa</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>123456</td>
-                    <td>Nguyen Duc Chinh</td>
-                    <td>8/8/2002</td>
-                    <td>Nam</td>
-                    <td>CNTT</td>
-                    <td>
-                        <a href="">Sua</a>
-                        <a href="">Xoa</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>987654</td>
-                    <td>Chinh Dep Trai</td>
-                    <td>6/6/2002</td>
-                    <td>Nam</td>
-                    <td>CNTT</td>
-                    <td>
-                        <a href="">Sua</a>
-                        <a href="">Xoa</a>
-                    </td>
-                </tr>
-            </table>
-        </div>
+            <!-- FORM -->
+            <div class="form-add col-md-12">
+                <form class="form-horizontal" id="form-edit-student">
+                    <fieldset>
+                        <!-- Form Name -->
+                        <legend>Student</legend>
+                        <!-- Text input -->
+                        <div class="form-group">
+                            <label for="student-id" class="col-md-2 control-label">Mã sinh viên<span
+                                    style="color: red;">(*)</span></label>
+                            <div class="col-md-4">
+                                <input type="text" name="student-id" id="student-id" placeholder="Nhập mã sinh viên"
+                                    class="">
+                                <span id="err-msv"></span>
+                            </div>
+                        </div>
+                        <!-- <i class='fas fa-edit'></i> -->
+                        <!-- Text input -->
+                        <div class="form-group">
+                            <label for="student-name" class="col-md-2 control-label">Họ tên</label>
+                            <div class="col-md-4">
+                                <input type="text" name="student-name" id="student-name" placeholder="Nhập họ tên"
+                                    class="">
+                                <span id="err-tensv"></span>
+                            </div>
+                        </div>
+                        <!-- Date input -->
+                        <div class="form-group">
+                            <label for="student-birthday" class="col-md-2 control-label">Ngày sinh</label>
+                            <div class="col-md-4">
+                                <input type="date" name="student-birthday" id="student-birthday" class="">
+                                <span id="err-birthday"></span>
+                            </div>
+                        </div>
+                        <!-- Radio input  -->
+                        <div class="form-group">
+                            <label for="student-gender" class="col-md-2 control-label">Giới tính</label>
+                            <div class="col-md-1">
+                                <input type="radio" name="student-gender" id="student-gender-male" class="" value="Nam">
+                                Nam
+                            </div>
+                            <div class="col-md-1">
+                                <input type="radio" name="student-gender" id="student-gender-famale" class=""
+                                    value="Nữ"> Nữ
+                            </div>
+                            <span id="err-gender"></span>
+                        </div>
+                        <!-- Select  -->
+                        <div class="form-group">
+                            <label for="student-major" class="col-md-2 control-label">Khoa</label>
+                            <select name="student-major" id="student-major">
+                                <option value="CNTT" selected="selected">CNTT</option>
+                                <option value="QTKD">QTKD</option>
+                                <option value="NNVHTQ">NNVHTQ</option>
+                                <option value="LTK">LTK</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                </form>
+                <div class="form-group">
+                    <label for="btn-save" class="col-md-1 control-label"></label>
+                    <div class="col-md-1" id="saveupdate">
+                        <button id="btn-save" name="btn-save" class="btn btn-success"
+                            onclick="addStudent()">Save</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="btn-update" class="col-md-1 control-label"></label>
+                    <div class="col-md-1" id="update">
+                        <button id="btn-update" name="btn-update" class="btn btn-primary"
+                            onclick="updateStudent()">Update</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="btn-delete" class="col-md-1 control-label"></label>
+                    <div class="col-md-1" id="delete">
+                        <button id="btn-delete" name="btn-delete" class="btn btn-danger"
+                            onclick="deleteselectedStudents()">Delete</button>
+                    </div>
+                </div>
+            </div>
 
-        <div class="area-addstudent">
-            <form action="" method="post">
-                <button class="ADD" onclick="addStudent()">Them</button>
-                <button class="UPDATE" onclick="updateStudent()">Cap nhat</button>
-                <button class="DELETE" onclick="deleteStudent()">Xoa</button> <br>
-                <label for="">Ma Sv <span style="color: red;">(*)</span></label>
-                <input type="text" id="masv" name="txtMaSV" placeholder="Nhap ma sv" required> <br>
-                <label for="">Ten SV</label>
-                <input type="text" id="hoten" name="txtTenSV" placeholder="Nhap ten sv"> <br>
-                <label for="">Ngay sinh</label>
-                <input type="text" id="ngaysinh" name="txtNgaySinh" placeholder="Nhap ngay sinh"> <br>
-                <label for="">Gioi tinh</label>
-                <input type="radio" id="male" name="gender" value="Nam">
-                <label for="gender">Nam</label>
-                <input type="radio" id="famale" name="gender" value="Nu">
-                <label for="gender">Nu</label> <br>
-                <label for="">Khoa</label>
-                <select name="khoa" id="khoa">
-                    <option value="CNTT">CNTT</option>
-                    <option value="QTKD">QTKD</option>
-                    <option value="NNVHTQ">NNVHTQ</option>
-                    <option value="LTK">LTK</option>
-                </select>
-            </form>
+            <!-- LIST -->
+            <div class="list-student">
+                <legend>List of tudents</legend>
+                <table class="table table-bordered table-condensed table-hover">
+                    <thead>
+                        <tr style="background-color: red; color: white;">
+                            <td>(*)</td>
+                            <td>Mã sinh viên</td>
+                            <th>Tên sinh viên</th>
+                            <th>Ngày sinh</th>
+                            <th>Giới tính</th>
+                            <th>Khoa</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="form-list-student-body">
+
+                    </tbody>
+                </table>
+            </div>
+            <br>
+            <!-- view -->
         </div>
     </div>
-
-
     <script src="bai1.js"></script>
 </body>
 

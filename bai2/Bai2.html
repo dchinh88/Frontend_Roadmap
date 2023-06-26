@@ -1,60 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Tic Tac Toe Game</title>
     <link rel="stylesheet" href="style-bai2.css">
-    <style>
-        input{
-            width: 50px;
-            height: 50px;
-        }
-    </style>
 </head>
+
 <body>
     <div class="container">
         <h1>TIC TAC TOE</h1>
-        <div class="luotchoi">
-            <label for="">Luot choi: X</label>
+
+        <div class="content">
+            <div class="luotchoi" style="font-family: sans-serif; font-size: 14px;">
+
+            </div>
+            <div class="gamettt">
+                <div class="text" id="square_one_text"><button></button></div>
+                <div class="text" id="square_two_text"><button></button></div>
+                <div class="text" id="square_three_text"><button></button></div>
+                <div class="text" id="square_four_text"><button></button></div>
+                <div class="text" id="square_five_text"><button></button></div>
+                <div class="text" id="square_six_text"><button></button></div>
+                <div class="text" id="square_seven_text"><button></button></div>
+                <div class="text" id="square_eight_text"><button></button></div>
+                <div class="text" id="square_nine_text"><button></button></div>
+            </div>
+            <div id="myModal" class="modal animated fadeIn">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Game Over</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p class="modal_text"></p>
+                        <button id="restartBtn">Play again?</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <table class="gamettt">
-            <tr>
-                <td>
-                    <input type="button" class="button" type="button" value="X" onclick="">
-                </td>
-                <td>
-                    <input type="button" class="button" type="button" value="X" onclick="">
-                </td>
-                <td>
-                    <input type="button" class="button" type="button" value="X" onclick="">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="button" class="button" type="button" value="O" onclick="">
-                </td>
-                <td>
-                    <input type="button" class="button" type="button" value="O" onclick="">
-                </td>
-                <td>
-                    <input type="button" class="button" type="button" value="O" onclick="">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="button" class="button" type="button" value="X" onclick="">
-                </td>
-                <td>
-                    <input type="button" class="button" type="button" value="X" onclick="">
-                </td>
-                <td>
-                    <input type="button" class="button" type="button" value="X" onclick="">
-                </td>
-            </tr>
-        </table>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="bai2.js"></script>
 </body>
+
 </html>

@@ -6,10 +6,29 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.area-search {
-    width: 450px;
+.search,
+.form-add {
+    /* width: 415px; */
     border: 1px solid red;
 }
+.search label,
+.form-add label {
+    background-color: #DDDDDD;
+}
+.search button {
+    color: white;
+    background-color: red;
+}
+.list-student {
+    border: 1px solid red;
+    /* width: 450px; */
+}
+.list-student table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+/*
 
 .area-addstudent label,
 .area-search label {
@@ -37,4 +56,4 @@ td {
 .area-addstudent {
     border: 1px solid red;
     width: 450px;
-}
+} */
