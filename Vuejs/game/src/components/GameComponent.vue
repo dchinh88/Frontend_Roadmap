@@ -9,8 +9,10 @@
     </div>
     <div class="game-info">
       <div>{{ status }}</div>
+      <button @click="toggleSorting">Toggle Sorting</button>
       <MovesComponent 
         :history="history" 
+        :moves="moves"
         :stepNumber="stepNumber" 
         @jump-to="jumpTo"
       ></MovesComponent>
@@ -36,7 +38,8 @@ export default {
         }
       ],
       stepNumber: 0,
-      xIsNext: true
+      xIsNext: true,
+      isAscending: true
     };
   },
   methods: {
@@ -57,10 +60,14 @@ export default {
       });
       this.xIsNext = !this.xIsNext;
       this.stepNumber = history.length;
+      // console.log(this.currentSquares);
     },
     jumpTo(step) {
       this.stepNumber = step;
       this.xIsNext = step % 2 === 0;
+    },
+    toggleSorting() {
+      this.isAscending = !this.isAscending;
     }
   },
   computed: {
@@ -142,8 +149,26 @@ export default {
       } else if (this.stepNumber === 100) {
         return "Draw";
       } else {
+        
         return "Next player: " + (this.xIsNext ? "X" : "O");
       }
+    },
+    moves() {
+      
+      let moves = this.history.map((step, move) => {
+        const row = Math.floor(step.selectedSquare / 10 + 1);
+        const col = (step.selectedSquare % 10) + 1;
+        const desc = move ? `Go to move #${move} (${row}-${col}) ` :
+         'Go to game start';
+        return {
+          move, 
+          desc
+        }
+      });
+      if(!this.isAscending) {
+        moves = moves.reverse()
+      }
+      return moves;
     }
   }
 };
@@ -157,6 +182,9 @@ export default {
 
 .game-info {
   margin-left: 20px;
+}
+.highlight {
+  font-weight: bold;
 }
 </style>
   
