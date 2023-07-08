@@ -5,9 +5,18 @@
       <h1>Student Management</h1>
       <div class="search">
         <label for class="searchlabel">Tìm kiếm</label>
-        <input type="text" value class="txtsearch" />
-        <button class="btnSearch">Search</button>
+        <input 
+          type="text" 
+          value class="txtsearch" 
+          placeholder="Nhập tên cần tìm kiếm" 
+          v-model="searchStudent"
+        />
+        <button 
+          @click="search"
+          class="btnSearch"
+        >Search</button>
       </div>
+      <!-- {{ searchStudent }} -->
     </div>
     <div class="formInput">
       <div class="idInput">
@@ -95,7 +104,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="(student) in students" :key="student.id">
+          <tr v-for="(student, index) in search" :key="index">
             <td>
               <input type="checkbox" :value="student.id" v-model="checked" />
             </td>
@@ -109,6 +118,7 @@
               <button @click="deleteStudent(student.id)">DELETE</button>
             </td>
           </tr>
+          
         </tbody>
       </table>
     </div>
@@ -117,6 +127,13 @@
 
 <script>
 export default {
+  computed: {
+    search() {
+      // console.log('ahaha');
+      return this.students.filter(student => 
+      student.name.toLowerCase().includes(this.searchStudent.toLowerCase()))
+    },
+  },
   data() {
     return {
       sub: {
@@ -138,6 +155,7 @@ export default {
       students: [],
       selectStudent: {},
       editingStudent: null,
+      searchStudent: "",
       genders: [
         {
           id: 1,
@@ -181,6 +199,7 @@ export default {
     }
   },
   methods: {
+    
     validateForm() {
       if (this.sub.id.length < 3 || this.sub.id.length > 10) {
         this.errors.id = "ID ngắn, nhập lại ID.";
